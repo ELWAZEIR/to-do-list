@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO-LIST</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/td.jpg">
+</head>
+
+<body onload ="getDataFromLsAndDisplayIt()">
+
+    
+    <div id="parent">
+        <div id="searchParent">
+            <div id="logoutContainer">
+                <i onclick="logout()" class="fa fa-sign-out" style="width: 100px;">logout</i>
+            </div>
+            
+            <div id="searchContainer">
+                <input type="text" name="" id="search" placeholder = "Search With Name" onkeypress="search()" onkeyup="search()">
+            </div>
+        </div>
+
+        <h1 >TODO LIST</h1>
+        
+        <div id="buttons">
+            <div id="addTaskButtonContainer" >
+                <button id="addTaskButton" onclick="sendDataToLS()">Add Task</button>
+            </div>
+            <div id="clearAllContainer">
+                <button id="clearAllButton" onclick="clearAll()">Clear Tasks</button> 
+            </div>
+            <br>
+        </div>
+        
+
+
+<!-- HOLDING ALL TASKS -->
+        <div id="allTasks"></div>
+
+    </div>
+
+
+
+<!-- visible only when user reach deadline -->
+    <div id="modal"> 
+        <div class="modal-content">
+            Timer is up!! <br> Do you really want to delete task now ?
+            <br>
+            <div class="alertButtons">
+                <button id="yesBtn">yes</button>
+                <button id="noBtn">no</button>
+            </div> 
+            
+        </div>
+    </div>
+
+
+
+
+<script src="getters.js"></script>
+<script src="creators.js"></script>
+<script src="main.js"></script>
+
+<script src="js/style.js"></script>
+<script src="js/login.js"></script>
+<script src="js/search.js"></script>
+<script src="js/deadline-alert.js"></script>
+   
+    
+</body>
+</html>
